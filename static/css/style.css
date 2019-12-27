@@ -1,0 +1,63 @@
+/* Homepage */
+.img-bg img{
+    margin-top: 30px;
+}
+
+@media screen and (max-width:768px){
+    .img-bg img{
+        width: 100%;
+}
+}
+.std-box{
+    color: green;
+    margin: 10px 0px auto;
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid olivedrab;
+}
+
+.std-box h4{
+    text-align: center;
+}
+
+.btn-main{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.btn-main .btn-box{
+    width: 160px;
+    float: right; 
+    text-align: center;
+    margin: 20px 0;
+    clear: both;
+}
+
+.btn-main a{
+    border: 1px solid olivedrab;
+}
+
+@media screen and (max-width:768px){
+    .btn-main .btn-box{
+        float: none !important;
+        margin: 20px auto !important;
+        clear: inherit !important;
+    }
+    .img-bg .form-bg{
+        width: 80% !important;
+    }
+}
+
+.img-bg{
+    width: 100%;
+    text-align: center;
+    /* border: 2px solid black; */
+    height: auto;
+}
+
+/* Add Student */
+.img-bg .form-bg{
+    width: 40%;
+    margin: auto;
+}

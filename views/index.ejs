@@ -1,0 +1,68 @@
+
+    <%- include ('./include/header') %>
+    
+<div class="container">
+    <!-- <div class="std-box">
+        <h4>Student Register</h4>
+    </div> -->
+    <div class="btn-main">
+        <div class="btn-box">
+            <a class="btn btn-warning" href="/students/addstudent">Add New Student</a>
+        </div>
+    </div>
+    <div class="img-bg">
+        <div class="table-responsive small" id="client-msg">
+            <table class="display" id="stdTable" width="100%">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Student Name</th>
+                        <th>Course</th>
+                        <th>Level</th>
+                        <th>Gender</th>
+                        <th>Club</th>
+                        <th>Status</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+            <tbody>
+                
+                <% sdata.map(d => { %>
+                <tr> 
+                    <td style="width: 10%;"> <img src="/uploads/<%= d.img %>" width="90%" height="60px" style="margin: 0 auto;" alt=""> </td>
+                    <td> <%= d.name %> </td>
+                    <td> <%= d.course %> </td>
+                    <td> <%= d.level %> </td>
+                    <td> <%= d.gender %> </td>
+                    <td> <%= d.club %> </td>
+                    <td> <%= d.stdtype %> </td>
+                    <td><a class="btn btn-sm btn-warning" href="/students/editstudent/<%=d.sid%>">Edit</a></td>
+                    <td><a class="btn btn-sm btn-danger"
+                            onclick="return confirm('Are You Sure To Delete?')"
+                            href="/students/delstudent/<%=d.sid%>">X</a>
+                    </td>
+                </tr> 
+                <%})%>
+                
+            </tbody>
+            </table>
+    </div>                    
+</div>
+    
+
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.dataTables.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $('#stdTable').DataTable();
+    });
+    
+// {"dom":' <"search"f><"top"l>rt<"bottom"ip><"clear">'}
+</script>
+</body>
+</html>
