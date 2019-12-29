@@ -9,17 +9,16 @@
 }
 }
 .std-box{
-    /* color: green; */
     margin: 10px 0px auto !important;
-    width: 100%;
+    width: auto;
     height: auto;
-    /* border-bottom: 1px solid olivedrab; */
 }
 
 .std-box h6{
-    width: 50%;
-    text-align: center !important;
+    width: fit-content;
     margin: auto !important;
+    background-color: brown;
+    color: white;
 }
 
 .btn-main{

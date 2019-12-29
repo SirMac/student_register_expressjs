@@ -10,7 +10,7 @@ route.get('/', (req,res)=>{
         if(err){
             console.log(`Error, Could Not Query Database: [${err}]`)
              res.render('index.ejs', {title:'Home',nvbrand:'Student Register', 
-             nlink:'active',rlink:'',llink:'', sdata:[]})
+             nlink:'active',rlink:'',llink:'', sdata:[],msg:'Error, Could Not Query Database'})
         }
         else{
             // console.log('Search Successful: ',result)
