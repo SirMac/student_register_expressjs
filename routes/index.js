@@ -15,7 +15,7 @@ route.get('/', (req,res)=>{
         else{
             // console.log('Search Successful: ',result)
             res.render('index.ejs', {title:'Home',nvbrand:'Student Register', 
-            nlink:'active',rlink:'',llink:'',sdata:result})
+            nlink:'active',rlink:'',llink:'',sdata:result,msg:req.session.msg})
             }
         conn.close
     }) 

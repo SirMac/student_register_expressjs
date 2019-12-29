@@ -10,12 +10,17 @@ app.use(session({
     secret:'register success',
     resave: false,
     saveUninitialized: true, 
-    cookie:{maxAge:60000}
+    cookie:{maxAge:5000}
 }))
 
 
 app.use('/', require('./routes/index'))
 app.use('/students', require('./routes/students'))
 
+app.use((req,res,next)=>{
+    res.status(404).send('Page Not Found')
+    // next()
+})
 
-app.listen(3000, ()=>{console.log('Listening on Port 3000')})
+const PORT = process.env.PORT || 3000
+app.listen(PORT, ()=>{console.log('Listening on Port 3000')})

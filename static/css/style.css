@@ -9,15 +9,17 @@
 }
 }
 .std-box{
-    color: green;
-    margin: 10px 0px auto;
+    /* color: green; */
+    margin: 10px 0px auto !important;
     width: 100%;
     height: auto;
-    border-bottom: 1px solid olivedrab;
+    /* border-bottom: 1px solid olivedrab; */
 }
 
-.std-box h4{
-    text-align: center;
+.std-box h6{
+    width: 50%;
+    text-align: center !important;
+    margin: auto !important;
 }
 
 .btn-main{
