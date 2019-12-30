@@ -5,6 +5,12 @@ const fileupload = require('express-fileupload')
 
 student_router.use(fileupload())
 
+//Middleware to add files to body object
+student_router.use((req,res,next)=>{
+   req.body.files = req.files
+   next()
+})
+
 //=============Add Students======================
 student_router.get('/addstudent', stdcontroller.addstudent_index)
 student_router.post('/addstudent', stdcontroller.addstudent_create)
@@ -16,6 +22,7 @@ student_router.get('/delstudent/:id', stdcontroller.deletestudent)
 student_router.get('/editstudent/:id', stdcontroller.editstudent_index) 
 student_router.post('/editstudent/:id', stdcontroller.editstudent_update)
 
+// Middleware to handle 404
 student_router.use((req,res,next)=>{
    res.status(404).send('Page Not Found')
    next()
