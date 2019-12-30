@@ -24,7 +24,7 @@ exports.joiValidate = (req,res) => {
 
   Joi.validate(dataToValidate, schema, (err,result)=>{
       if(err){
-         console.log(err.details[0].message)
+         err.details.map(e=>console.log(e.message))
          if(err.details[0].message=='"mimetype" must be one of [image/jpeg, image/png]' ||
             err.details[0].message=='"size" must be less than or equal to 200000'){
             req.session.sdata = 'Image must be < 200KB and of type JPEG or PNG'
