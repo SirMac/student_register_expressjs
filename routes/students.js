@@ -1,30 +1,25 @@
 const express = require('express')
 const student_router = express.Router()
-const stdcontroller = require('../controller/stdcontroller')
 const fileupload = require('express-fileupload')
+const stdcontroller = require('../controller/stdcontroller')
+const joivalidate = require('../config/joiconfig')
 
 student_router.use(fileupload())
 
-//Middleware to add files to body object
-student_router.use((req,res,next)=>{
-   req.body.files = req.files
-   next()
-})
-
 //=============Add Students======================
 student_router.get('/addstudent', stdcontroller.addstudent_index)
-student_router.post('/addstudent', stdcontroller.addstudent_create)
+student_router.post('/addstudent', joivalidate.validate, stdcontroller.addstudent_create)
 
 //=========Delete Student==============
 student_router.get('/delstudent/:id', stdcontroller.deletestudent) 
 
 //============ Edit Student Details ==============
 student_router.get('/editstudent/:id', stdcontroller.editstudent_index) 
-student_router.post('/editstudent/:id', stdcontroller.editstudent_update)
+student_router.post('/editstudent/:id', joivalidate.validate, stdcontroller.editstudent_update)
 
 // Middleware to handle 404
 student_router.use((req,res,next)=>{
-   res.status(404).send('Page Not Found')
+   res.status(404).render('404.ejs')
    next()
 })
 

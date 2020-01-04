@@ -5,7 +5,7 @@ exports.imgupload = (req,res) => {
     let uploadpath = './static/uploads/' + imgfile.name
 
     imgfile.mv(uploadpath, er=>{
-        return er ? console.log(er) : ''
+        return er ? console.log(er) : console.log('Image upload successful')
      })
 }
 

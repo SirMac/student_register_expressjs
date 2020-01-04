@@ -1,21 +1,15 @@
-const joivalidate = require('../config/joiconfig')
 const uploadfile = require('../config/fileUpload')
 const conn = require('../config/sqldb')
 
 //===========Add New Student=============================
 exports.addstudent_index = (req,res)=>{
    res.render('addstudent.ejs', {title:'Add New Student',nvbrand:'Add New Student', 
-   rlink:'active',nlink:'',llink:'',success:req.session.sdata,sdata:[] })
-   sdata=''
+   rlink:'active',nlink:'',llink:'',sdata:[] })
 }
 
 exports.addstudent_create = (req,res)=>{
-   joivalidate.joiValidate(req,res)
-   if(req.session.joiresult){
-      const sqlmodel = require('../models/sqlmodel')
-      sqlmodel.addstd_query(req,res)
-   }
-   else{res.redirect('/students/addstudent')}
+   const sqlmodel = require('../models/sqlmodel')
+   sqlmodel.addstd_query(req,res)
 }
 
 
@@ -24,12 +18,12 @@ exports.deletestudent = (req,res)=>{
     let q = "DELETE FROM `students` WHERE sid='"+req.params.id+"' "
     conn.query(q, err=>{
       if(err){
-         req.session.msg = `Delete Student With ID ${req.params.id} NOT Successful`
+         req.flash('error_msg', `Delete Student With ID ${req.params.id} NOT Successful`)
          console.log(`Delete Student NOT Successful: ${err.code} [${err.sqlMessage}]`)        
          res.redirect('/')
       }
       else{
-         req.session.msg = `Student With ID ${req.params.id} Deleted Successfully`
+         req.flash('success_msg', `Student With ID ${req.params.id} Deleted Successfully`)
          console.log('Delete Student Successful')
          uploadfile.imgdelete(req,res)
          res.redirect('/')}
@@ -37,21 +31,26 @@ exports.deletestudent = (req,res)=>{
 }
 
 //==============Edit Student ======================
-exports.editstudent_index = (req,res)=>{ 
+exports.editstudent_index = (req,res)=>{
+   let a 
    let q = "SELECT * FROM `students` WHERE sid='"+req.params.id+"' "
    conn.query(q, (err,result)=>{
    if(err){
-      req.session.sdata = 'Edit Student: DB Query not successful'
+      req.flash('error_msg', 'Edit Student not successful')
       console.log(`Edit Student: DB Query not successful ${err.code} [${err.sqlMessage}]`)
       res.render('editstudent.ejs',{title:'Edit Student Detail',nvbrand:'Edit Student Detail', 
-      rlink:'active',nlink:'',llink:'',success:req.session.sdata,edata:[]})
+      rlink:'active',nlink:'',llink:'',edata:[]})
    }
    else{
-      console.log('Edit Student: DB Query Successful')
-      res.render('editstudent.ejs',{title:'Edit Student Detail',nvbrand:'Edit Student Detail', 
-      rlink:'active',nlink:'',llink:'',success:req.session.sdata,edata:result[0]})
+      if(result.length>0){
+         console.log('Edit Student: DB Query Successful')
+         res.render('editstudent.ejs',{title:'Edit Student Detail',nvbrand:'Edit Student Detail', 
+         rlink:'active',nlink:'',llink:'',edata:result[0]})
+      }
+      else{res.redirect('/')}
    }
    })
+   
 }
 
 
@@ -60,40 +59,32 @@ exports.editstudent_update = (req,res)=>{
    const {name,course,level,gender,club,stdtype} = req.body
    
    if(req.files!==null && req.files!==undefined){
-      joivalidate.joiValidate(req,res)
-      if(req.session.joiresult){
-         // const {img} = req.files
-         let q = "UPDATE `students` SET name='"+name+"', course='"+course+"', level='"+level+"', gender='"+gender+"', club='"+club+"', stdtype='"+stdtype+"', img='"+req.files.img.name+"', date='"+date+"' WHERE sid='"+req.params.id+"' "
-           conn.query(q, err=>{
-               if(err){
-                   req.session.sdata = 'DB update not successful. Check DB Connection'
-                   console.log(`Edit Student: DB Update not successful: ${err.code} [${err.sqlMessage}]`)
-                   res.redirect(req.originalUrl)
-               }
-               else{
-                  req.session.msg = `${name} Details Editted Successfully`
-                   console.log('Edit Student: DB Update Successful')
-                   uploadfile.imgupload(req,res)
-                   res.redirect('/')
-               }
-           })
-   }
-else{
-   //Joi Validation Fails
-   res.redirect(req.originalUrl)
-}       
+      let q = "UPDATE `students` SET name='"+name+"', course='"+course+"', level='"+level+"', gender='"+gender+"', club='"+club+"', stdtype='"+stdtype+"', img='"+req.files.img.name+"', date='"+date+"' WHERE sid='"+req.params.id+"' "
+         conn.query(q, err=>{
+            if(err){
+               req.flash('error_msg', 'Student detail update not successful')
+               console.log(`Edit Student: DB Update not successful: ${err.code} [${err.sqlMessage}]`)
+               res.redirect(req.originalUrl)
+            }
+            else{
+               req.flash('success_msg', `"${name}" Details Editted Successfully`)
+               console.log('Edit Student: DB Update Successful')
+               uploadfile.imgupload(req,res)
+               res.redirect('/')
+            }
+         })      
 }
 
    else{
        let q = "UPDATE `students` SET name='"+name+"', course='"+course+"', level='"+level+"', gender='"+gender+"', club='"+club+"', stdtype='"+stdtype+"', date='"+date+"' WHERE sid='"+req.params.id+"' "
        conn.query(q, err=>{
            if(err){
-               req.session.sdata = 'DB update not successful. Check DB Connection'
+               req.flash('error_msg', 'Student detail update not successful')
                console.log(`Edit Student: DB Update not successful: ${err.code} [${err.sqlMessage}]`)
                res.redirect(req.originalUrl)
            }
            else{
-               req.session.msg = `${name} Details Editted Successfully`
+               req.flash('success_msg', `"${name}" Details Editted Successfully`)
                console.log('Edit Student: DB Update Successful')
                res.redirect('/')
            }

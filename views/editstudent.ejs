@@ -5,7 +5,7 @@
     <div class='img-bg' style='margin-top:10px'>
         <div class='form-bg'>
             <h5 style='margin-bottom:20px'><%= edata.name %> Detail</h5>
-            <span class="m-2- bg-warning"><%= success %></span>
+            <span class=""><%- include ('./include/alerts') %></span>
         <form action="/students/editstudent/<%=edata.sid%>" method="POST" enctype="multipart/form-data">
             <div class='form-group'>
                 <input class='form-control' name='name' type='text' value="<%= edata.name %>" placeholder='Enter student full name' required/>
