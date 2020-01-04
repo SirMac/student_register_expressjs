@@ -1,7 +1,7 @@
 const express = require('express')
 const student_router = express.Router()
 const fileupload = require('express-fileupload')
-const stdcontroller = require('../controller/stdcontroller')
+const stdcontroller = require('../controller/std_controller')
 const joivalidate = require('../config/joiconfig')
 
 student_router.use(fileupload())

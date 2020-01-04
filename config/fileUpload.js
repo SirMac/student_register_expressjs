@@ -1,17 +1,14 @@
 
-exports.imgupload = (req,res) => {
-    const {img} = req.files
-    let imgfile = img
-    let uploadpath = './static/uploads/' + imgfile.name
+exports.imgupload = (img) => {
+    let uploadpath = './static/uploads/' + img.name
 
-    imgfile.mv(uploadpath, er=>{
+    img.mv(uploadpath, er=>{
         return er ? console.log(er) : console.log('Image upload successful')
      })
 }
 
-exports.imgdelete = (req,res) => {
+exports.imgdelete = (img) => {
     const fs = require('fs')
-    const {img} = req.query
     let uploadpath = './static/uploads/'+img
 
     fs.unlink(uploadpath, er=>{

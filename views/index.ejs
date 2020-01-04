@@ -37,10 +37,10 @@
                     <td> <%= d.gender %> </td>
                     <td> <%= d.club %> </td>
                     <td> <%= d.stdtype %> </td>
-                    <td><a class="btn btn-sm btn-warning" href="/students/editstudent/<%=d.sid%>">Edit</a></td>
+                    <td><a class="btn btn-sm btn-warning" href="/students/editstudent/<%=d.id%>">Edit</a></td>
                     <td><a class="btn btn-sm btn-danger"
                         onclick="return confirm('Are You Sure To Delete?')"
-                        href="/students/delstudent/<%=d.sid%>?img=<%=d.img%>">X</a>
+                        href="/students/delstudent/<%=d.id%>?img=<%=d.img%>">X</a>
                     </td>
                 </tr> 
                 <%})%>
