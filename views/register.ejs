@@ -1,0 +1,49 @@
+
+    <%- include ('./include/head') %>
+    
+    <div class="container">
+        <%- include ('./include/alerts') %>
+        <div class="row mt-5">
+            <div class="col-md-6 m-auto">
+               <div class="card card-body">
+                 <h3 class="text-center mb-3"><i class="fa fa-laptop"></i>  Register</h3>
+                
+               <form action="/register" method="POST">
+                  <div class="left-addon">
+                  <div class='form-group'>
+                     <i class="fas fa-user"></i>
+                     <input class='form-control' name='name' type='text' placeholder='Enter your name' required/>
+                  </div>
+                  <div class='form-group'>
+                     <i class="fas fa-envelope"></i>
+                     <input class='form-control' name='email' type='email' placeholder='Enter your email' required/>
+                  </div>
+                  <div class='form-group'>
+                     <i class="fas fa-address-card"></i>
+                     <input class='form-control' name='address' type='text' placeholder='Enter your address' required/>
+                  </div>
+                  <div class='form-group'>
+                     <i class="fas fa-key"></i>
+                     <input class='form-control' name='password' type='password' placeholder='Enter your password' required/>
+                  </div>
+                  <div class='form-group'>
+                     <i class="fas fa-key"></i>
+                     <input class='form-control' name='password2' type='password' placeholder='Confirm your password' required/>
+                  </div>
+                  <button style='float:right' type='submit' class='btn btn-danger btn-md m-2'>Register</button>
+                  </div>
+               </form>                   
+   
+    <span class="m-2">Already have account?<a class="btn border btn-success btn-sm ml-2" href="/login">Login</a></span>
+    </div>
+     </div>
+    </div>  
+    </div>  
+
+
+
+   <script src="/js/jquery-3.4.1.min.js"></script>
+   <script src="/js/bootstrap.min.js"></script>
+    <!-- <script src="js/owl.carousel.min.js"></script> -->
+    </body>
+</html>

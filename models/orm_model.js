@@ -2,8 +2,8 @@
 //import to app: const db = require('../models/orm_model').schema()
 //e.g. db.findAll().then(result=>{})
 //Author: Mac. All rights reserved.
-
-const {Sequelize, Model, DataTypes} = require('sequelize')
+const logger = require('../config/err_logger')
+const {Sequelize, DataTypes} = require('sequelize')
 const dbconfig = require('../config/dbconfig.json')
 const {username,password,database,host,dialect} = dbconfig.development
 const sequelize = new Sequelize(database,username,password,{
@@ -25,10 +25,21 @@ exports.schema = ()=>{
  return student
 }
 
+exports.users_schema = ()=>{
+  let users = sequelize.define("users",{
+    name: DataTypes.STRING,
+    email: DataTypes.STRING,
+    address: DataTypes.STRING,
+    password: DataTypes.STRING,
+  })
+  
+ return users
+}
+
 //Execute once to create empty table with schema above
 exports.syncSchema = () =>{
   this.schema()
   sequelize.sync({force: true}).then(()=>{
-    console.log('Sequalize connection established')
+    logger.log('info','Sequalize connection established')
  })
 }

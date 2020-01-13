@@ -1,0 +1,8 @@
+2020-01-12T14:52:27.780Z error: Password not correct
+2020-01-12T14:53:00.469Z error: Email not correct
+2020-01-12T14:59:32.699Z error: Password not correct
+2020-01-12T15:12:08.431Z error: Joi Validation Not Successful: "password" length must be at least 3 characters long
+2020-01-12T15:15:35.978Z error: Email not registered
+2020-01-12T15:23:54.241Z error: Joi Validation Not Successful: "name" length must be at least 3 characters long
+2020-01-12T15:24:54.097Z error: Email Already Exist. Try with different email
+2020-01-12T15:38:41.242Z error: Please log in to view that resource

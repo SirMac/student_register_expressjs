@@ -62,3 +62,10 @@
     width: 40%;
     margin: auto;
 }
+
+/* Put icons within form input */
+.left-addon input  { padding-left:  40px; }
+.left-addon i  { 
+    position: absolute;
+    padding:  10px; 
+}

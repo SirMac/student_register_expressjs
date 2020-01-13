@@ -5,6 +5,9 @@ const stdcontroller = require('../controller/std_controller')
 const joivalidate = require('../config/joiconfig')
 
 student_router.use(fileupload())
+ 
+//=============Dashboard======================
+student_router.get('/', stdcontroller.dashboard)
 
 //=============Add Students======================
 student_router.get('/addstudent', stdcontroller.addstudent_index)

@@ -1,15 +1,17 @@
 {
-  "name": "express-students",
+  "name": "express-students-register",
   "version": "1.0.0",
   "description": "Students Register App",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app"
+    "start": "node app",
+    "dev": "nodemon app"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "connect-flash": "^0.1.1",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
@@ -17,6 +19,9 @@
     "express-session": "^1.17.0",
     "joi": "^14.3.1",
     "mysql2": "^2.1.0",
-    "sequelize": "^5.21.3"
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "sequelize": "^5.21.3",
+    "winston": "^3.2.1"
   }
 }
