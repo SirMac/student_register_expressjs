@@ -1,5 +1,13 @@
 {
-  "development": {
+  "development_pg": {
+    "username": "postgres",
+    "password": "123",
+    "database": "pollsapp",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "operatorsAliases": false
+  },
+  "development_mysql": {
     "username": "root",
     "password": null,
     "database": "test",

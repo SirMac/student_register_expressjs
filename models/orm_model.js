@@ -5,7 +5,7 @@
 const logger = require('../config/err_logger')
 const {Sequelize, DataTypes} = require('sequelize')
 const dbconfig = require('../config/dbconfig.json')
-const {username,password,database,host,dialect} = dbconfig.development
+const {username,password,database,host,dialect} = dbconfig.development_pg
 const sequelize = new Sequelize(database,username,password,{
    host, dialect,
    logging: false

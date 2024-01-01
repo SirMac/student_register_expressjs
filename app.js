@@ -33,6 +33,9 @@ app.use((req, res, next) => {
   next();
 })
 
+// create and run db migrations
+// require('./models/orm_model').syncSchema()
+
 const passport_config = require('./config/passport')
 
 app.use('/students', passport_config.notLoggedIn, require('./routes/students'))
