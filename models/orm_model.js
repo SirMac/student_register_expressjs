@@ -25,6 +25,18 @@ exports.student = ()=>{
  return student
 }
 
+
+exports.users = ()=>{
+  let users = sequelize.define("users",{
+    name: DataTypes.STRING,
+    email: DataTypes.STRING,
+    address: DataTypes.STRING,
+    password: DataTypes.STRING,
+  })
+  
+ return users
+}
+
 exports.users_schema = ()=>{
   let users = sequelize.define("users",{
     name: DataTypes.STRING,

@@ -4,6 +4,8 @@ const flash = require('connect-flash')
 const passport = require('passport')
 const logger = require('./config/err_logger')
 
+const UserRoutes = require('./users/route/users.routes')
+
 const app = express()
 
 app.set('view-engine', 'ejs')
@@ -39,8 +41,9 @@ app.use((req, res, next) => {
 const passport_config = require('./config/passport')
 
 app.use('/students', passport_config.notLoggedIn, require('./routes/students'))
-app.use('/login', passport_config.loggedIn, require('./routes/login'))
-app.use('/register', passport_config.loggedIn, require('./routes/register'))
+new UserRoutes(app)
+// app.use('/login', passport_config.loggedIn, require('./routes/login'))
+// app.use('/register', passport_config.loggedIn, require('./routes/register'))
 
 
 //=====Logout===========

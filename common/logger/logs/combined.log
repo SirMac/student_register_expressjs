@@ -1,0 +1,203 @@
+2025-01-11T23:13:04.082Z info: server running on PORT 3300
+2025-01-11T23:13:06.050Z info: User, 'gabby' logged-in successfully
+2025-01-11T23:14:57.266Z error: getTokenPayloadFromCookies: Access token not found in cookies
+2025-01-11T23:14:57.267Z error: httpError. tokenExpired: User authentication failed
+2025-01-11T23:14:57.268Z error: getTokenPayloadFromCookies: Access token not found in cookies
+2025-01-11T23:14:57.268Z error: httpError. tokenExpired: User authentication failed
+2025-01-11T23:14:57.289Z info: createNewJWT: Access token REFRESHED for gabby
+2025-01-11T23:14:57.296Z info: createNewJWT: Access token REFRESHED for gabby
+2025-01-11T23:15:07.669Z error: getTokenPayloadFromCookies: username not found in cookies
+2025-01-11T23:15:07.670Z error: httpError. tokenExpired: User authentication failed
+2025-01-11T23:15:07.671Z error: getTokenPayloadFromCookies: username not found in cookies
+2025-01-11T23:15:07.672Z error: httpError. tokenExpired: User authentication failed
+2025-01-11T23:15:07.680Z error: verifyToken error: jwt must be provided
+2025-01-11T23:15:07.680Z error: Invalid or expired refresh token
+2025-01-11T23:15:07.683Z error: verifyToken error: jwt must be provided
+2025-01-11T23:15:07.683Z error: Invalid or expired refresh token
+2025-01-11T23:15:30.551Z error: getTokenPayloadFromCookies: username not found in cookies
+2025-01-11T23:15:30.552Z error: httpError. tokenExpired: User authentication failed
+2025-01-11T23:15:30.552Z error: getTokenPayloadFromCookies: username not found in cookies
+2025-01-11T23:15:30.553Z error: httpError. tokenExpired: User authentication failed
+2025-01-11T23:15:30.569Z error: verifyToken error: jwt must be provided
+2025-01-11T23:15:30.570Z error: Invalid or expired refresh token
+2025-01-11T23:15:30.571Z error: verifyToken error: jwt must be provided
+2025-01-11T23:15:30.571Z error: Invalid or expired refresh token
+2025-01-12T18:28:39.343Z info: server running on PORT 3300
+2025-01-12T18:29:02.292Z error: getCookie: cookies or search key undefined
+2025-01-12T18:29:02.368Z info: User, 'gabby' logged-in successfully
+2025-01-12T18:29:45.980Z info: server running on PORT 3300
+2025-01-12T18:29:48.148Z error: httpError. : testError
+2025-01-12T18:29:48.152Z error: httpError. : testError
+2025-01-12T18:32:39.149Z info: server running on PORT 3300
+2025-01-12T18:33:10.078Z info: server running on PORT 3300
+2025-01-12T18:33:15.250Z error: httpError. AssertionError [ERR_ASSERTION]: {"httpStatusCode":401,"message":"testError","appErrorCode":""} at throwError (/home/mac/Documents/Projects/nodejs/inventory_app/server/common/utils/errorHandler.js:20:10) at cookieParser (/home/mac/Documents/Projects/nodejs/inventory_app/server/common/middleware/common.middleware.js:11:9)
+2025-01-12T18:34:50.581Z info: server running on PORT 3300
+2025-01-12T18:34:58.577Z error: httpError. undefined: AssertionError [ERR_ASSERTION]: {"httpStatusCode":401,"message":"testError","appErrorCode":""} at throwError (/home/mac/Documents/Projects/nodejs/inventory_app/server/common/utils/errorHandler.js:20:10) at cookieParser (/home/mac/Documents/Projects/nodejs/inventory_app/server/common/middleware/common.middleware.js:11:9)
+2025-01-12T18:35:17.037Z info: server running on PORT 3300
+2025-01-12T18:35:19.088Z error: httpError. http://localhost:5173: AssertionError [ERR_ASSERTION]: {"httpStatusCode":401,"message":"testError","appErrorCode":""} at throwError (/home/mac/Documents/Projects/nodejs/inventory_app/server/common/utils/errorHandler.js:20:10) at cookieParser (/home/mac/Documents/Projects/nodejs/inventory_app/server/common/middleware/common.middleware.js:11:9)
+2025-01-12T18:36:06.754Z info: server running on PORT 3300
+2025-01-12T18:51:41.524Z info: server running on PORT 3300
+2025-01-12T18:53:48.691Z info: server running on PORT 3300
+2025-01-12T19:07:27.389Z info: server running on PORT 3300
+2025-01-12T19:07:31.325Z info: User, 'gabby' logged-in successfully
+2025-01-12T19:08:20.908Z info: server running on PORT 3300
+2025-01-12T19:09:29.346Z error: getTokenPayloadFromCookies: Access token not found in cookies
+2025-01-12T19:09:29.348Z error: httpError. http://localhost:5173: AssertionError [ERR_ASSERTION]: {"httpStatusCode":401,"message":"User authentication failed","appErrorCode":"tokenExpired"} at throwError (/home/mac/Documents/Projects/nodejs/inventory_app/server/common/utils/errorHandler.js:20:10) at validJWTNeeded (/home/mac/Documents/Projects/nodejs/inventory_app/server/auth/middleware/jwt.middleware.js:80:5)
+2025-01-12T19:09:29.379Z info: createNewJWT: Access token REFRESHED for gabby
+2025-01-12T19:09:29.402Z error: getTokenPayloadFromCookies: Access token not found in cookies
+2025-01-12T19:09:29.402Z error: httpError. http://localhost:5173: AssertionError [ERR_ASSERTION]: {"httpStatusCode":401,"message":"User authentication failed","appErrorCode":"tokenExpired"} at throwError (/home/mac/Documents/Projects/nodejs/inventory_app/server/common/utils/errorHandler.js:20:10) at validJWTNeeded (/home/mac/Documents/Projects/nodejs/inventory_app/server/auth/middleware/jwt.middleware.js:80:5)
+2025-01-12T19:09:29.414Z info: createNewJWT: Access token REFRESHED for gabby
+2025-01-12T19:12:38.682Z info: server running on PORT 3300
+2025-01-12T19:12:41.325Z error: getTokenPayloadFromCookies: Access token not found in cookies
+2025-01-12T19:12:41.327Z error: httpError. http://localhost:5173: AssertionError [ERR_ASSERTION]: {"httpStatusCode":401,"message":"User authentication failed","appErrorCode":"tokenExpired"} at throwError (/home/mac/Documents/Projects/nodejs/inventory_app/server/common/utils/errorHandler.js:20:10) at validJWTNeeded (/home/mac/Documents/Projects/nodejs/inventory_app/server/auth/middleware/jwt.middleware.js:80:5)
+2025-01-12T19:12:41.350Z info: createNewJWT: Access token REFRESHED for gabby
+2025-01-12T19:12:41.374Z error: getTokenPayloadFromCookies: Access token not found in cookies
+2025-01-12T19:12:41.375Z error: httpError. http://localhost:5173: AssertionError [ERR_ASSERTION]: {"httpStatusCode":401,"message":"User authentication failed","appErrorCode":"tokenExpired"} at throwError (/home/mac/Documents/Projects/nodejs/inventory_app/server/common/utils/errorHandler.js:20:10) at validJWTNeeded (/home/mac/Documents/Projects/nodejs/inventory_app/server/auth/middleware/jwt.middleware.js:80:5)
+2025-01-12T19:12:41.389Z info: createNewJWT: Access token REFRESHED for gabby
+2025-01-12T19:13:25.422Z error: httpError. http://localhost:5173: AssertionError [ERR_ASSERTION]: {"httpStatusCode":403,"message":"Request body options must be an object","appErrorCode":"pageAccessError"} at throwError (/home/mac/Documents/Projects/nodejs/inventory_app/server/common/utils/errorHandler.js:20:10) at handlePageAccess (/home/mac/Documents/Projects/nodejs/inventory_app/server/auth/controllers/auth.controller.js:33:5)
+2025-01-12T19:13:57.975Z info: User, 'gabby' logged-in successfully
+2025-01-12T19:23:35.518Z info: server running on PORT 3300
+2025-01-12T19:26:30.936Z info: server running on PORT 3300
+2025-01-12T19:32:40.758Z info: server running on PORT 3300
+2025-01-12T19:33:21.534Z info: server running on PORT 3300
+2025-01-12T19:35:59.265Z info: server running on PORT 3300
+2025-01-12T19:37:32.473Z info: server running on PORT 3300
+2025-01-12T19:37:45.046Z info: server running on PORT 3300
+2025-01-12T19:38:23.648Z info: server running on PORT 3300
+2025-01-12T19:39:54.145Z info: server running on PORT 3300
+2025-01-12T19:39:58.619Z error: getTokenPayloadFromCookies: Access token not found in cookies
+2025-01-12T19:39:58.621Z error: httpError. http://localhost:5173: AssertionError [ERR_ASSERTION]: {"httpStatusCode":401,"message":"User authentication failed","appErrorCode":"tokenExpired"} at throwError (/home/mac/Documents/Projects/nodejs/inventory_app/server/common/utils/errorHandler.js:20:10) at validJWTNeeded (/home/mac/Documents/Projects/nodejs/inventory_app/server/auth/middleware/jwt.middleware.js:80:5)
+2025-01-12T19:39:58.653Z info: createNewJWT: Access token REFRESHED for gabby
+2025-01-12T19:39:58.672Z error: getTokenPayloadFromCookies: Access token not found in cookies
+2025-01-12T19:39:58.673Z error: httpError. http://localhost:5173: AssertionError [ERR_ASSERTION]: {"httpStatusCode":401,"message":"User authentication failed","appErrorCode":"tokenExpired"} at throwError (/home/mac/Documents/Projects/nodejs/inventory_app/server/common/utils/errorHandler.js:20:10) at validJWTNeeded (/home/mac/Documents/Projects/nodejs/inventory_app/server/auth/middleware/jwt.middleware.js:80:5)
+2025-01-12T19:39:58.684Z info: createNewJWT: Access token REFRESHED for gabby
+2025-01-12T19:41:10.645Z error: getTokenPayloadFromCookies: Access token not found in cookies
+2025-01-12T19:41:10.645Z error: httpError. http://localhost:5173: AssertionError [ERR_ASSERTION]: {"httpStatusCode":401,"message":"User authentication failed","appErrorCode":"tokenExpired"} at throwError (/home/mac/Documents/Projects/nodejs/inventory_app/server/common/utils/errorHandler.js:20:10) at validJWTNeeded (/home/mac/Documents/Projects/nodejs/inventory_app/server/auth/middleware/jwt.middleware.js:80:5)
+2025-01-12T19:41:10.646Z error: getTokenPayloadFromCookies: Access token not found in cookies
+2025-01-12T19:41:10.647Z error: httpError. http://localhost:5173: AssertionError [ERR_ASSERTION]: {"httpStatusCode":401,"message":"User authentication failed","appErrorCode":"tokenExpired"} at throwError (/home/mac/Documents/Projects/nodejs/inventory_app/server/common/utils/errorHandler.js:20:10) at validJWTNeeded (/home/mac/Documents/Projects/nodejs/inventory_app/server/auth/middleware/jwt.middleware.js:80:5)
+2025-01-12T19:41:10.670Z info: createNewJWT: Access token REFRESHED for gabby
+2025-01-12T19:41:10.673Z info: createNewJWT: Access token REFRESHED for gabby
+2025-01-12T19:42:46.155Z error: getTokenPayloadFromCookies: Access token not found in cookies
+2025-01-12T19:42:46.155Z error: httpError. http://localhost:5173: AssertionError [ERR_ASSERTION]: {"httpStatusCode":401,"message":"User authentication failed","appErrorCode":"tokenExpired"} at throwError (/home/mac/Documents/Projects/nodejs/inventory_app/server/common/utils/errorHandler.js:20:10) at validJWTNeeded (/home/mac/Documents/Projects/nodejs/inventory_app/server/auth/middleware/jwt.middleware.js:80:5)
+2025-01-12T19:42:46.167Z info: createNewJWT: Access token REFRESHED for gabby
+2025-01-12T19:43:14.516Z info: server running on PORT 3300
+2025-01-12T19:44:13.489Z info: server running on PORT 3300
+2025-01-12T19:44:20.336Z error: getTokenPayloadFromCookies: Access token not found in cookies
+2025-01-12T19:44:20.338Z error: httpError. http://localhost:5173: AssertionError [ERR_ASSERTION]: {"httpStatusCode":401,"message":"User authentication failed","appErrorCode":"tokenExpired"} at throwError (/home/mac/Documents/Projects/nodejs/inventory_app/server/common/utils/errorHandler.js:20:10) at validJWTNeeded (/home/mac/Documents/Projects/nodejs/inventory_app/server/auth/middleware/jwt.middleware.js:80:5)
+2025-01-12T19:44:20.359Z info: createNewJWT: Access token REFRESHED for gabby
+2025-01-12T19:44:20.392Z error: getTokenPayloadFromCookies: Access token not found in cookies
+2025-01-12T19:44:20.392Z error: httpError. http://localhost:5173: AssertionError [ERR_ASSERTION]: {"httpStatusCode":401,"message":"User authentication failed","appErrorCode":"tokenExpired"} at throwError (/home/mac/Documents/Projects/nodejs/inventory_app/server/common/utils/errorHandler.js:20:10) at validJWTNeeded (/home/mac/Documents/Projects/nodejs/inventory_app/server/auth/middleware/jwt.middleware.js:80:5)
+2025-01-12T19:44:20.404Z info: createNewJWT: Access token REFRESHED for gabby
+2025-01-12T19:45:10.470Z info: server running on PORT 3300
+2025-01-12T19:48:37.810Z error: getTokenPayloadFromCookies: Access token not found in cookies
+2025-01-12T19:48:37.811Z error: httpError. http://localhost:5173: AssertionError [ERR_ASSERTION]: {"httpStatusCode":401,"message":"User authentication failed","appErrorCode":"tokenExpired"} at throwError (/home/mac/Documents/Projects/nodejs/inventory_app/server/common/utils/errorHandler.js:20:10) at validJWTNeeded (/home/mac/Documents/Projects/nodejs/inventory_app/server/auth/middleware/jwt.middleware.js:80:5)
+2025-01-12T19:48:37.832Z info: createNewJWT: Access token REFRESHED for gabby
+2025-01-12T19:48:37.859Z error: getTokenPayloadFromCookies: Access token not found in cookies
+2025-01-12T19:48:37.860Z error: httpError. http://localhost:5173: AssertionError [ERR_ASSERTION]: {"httpStatusCode":401,"message":"User authentication failed","appErrorCode":"tokenExpired"} at throwError (/home/mac/Documents/Projects/nodejs/inventory_app/server/common/utils/errorHandler.js:20:10) at validJWTNeeded (/home/mac/Documents/Projects/nodejs/inventory_app/server/auth/middleware/jwt.middleware.js:80:5)
+2025-01-12T19:48:37.872Z info: createNewJWT: Access token REFRESHED for gabby
+2025-01-12T22:28:34.057Z error: getCookie: cookies or search key undefined
+2025-01-12T22:28:34.058Z error: getTokenPayloadFromCookies: cookies required
+2025-01-12T22:28:34.059Z error: httpError. http://localhost:5173: AssertionError [ERR_ASSERTION]: {"httpStatusCode":401,"message":"User authentication failed","appErrorCode":"tokenExpired"} at throwError (/home/mac/Documents/Projects/nodejs/inventory_app/server/common/utils/errorHandler.js:20:10) at validJWTNeeded (/home/mac/Documents/Projects/nodejs/inventory_app/server/auth/middleware/jwt.middleware.js:80:5)
+2025-01-12T22:28:34.068Z error: getCookie: cookies or search key undefined
+2025-01-12T22:28:34.068Z error: getTokenPayloadFromCookies: cookies required
+2025-01-12T22:28:34.068Z error: httpError. http://localhost:5173: AssertionError [ERR_ASSERTION]: {"httpStatusCode":401,"message":"User authentication failed","appErrorCode":"tokenExpired"} at throwError (/home/mac/Documents/Projects/nodejs/inventory_app/server/common/utils/errorHandler.js:20:10) at validJWTNeeded (/home/mac/Documents/Projects/nodejs/inventory_app/server/auth/middleware/jwt.middleware.js:80:5)
+2025-01-12T22:28:34.096Z error: getCookie: cookies or search key undefined
+2025-01-12T22:28:34.097Z error: getCookie: cookies or search key undefined
+2025-01-12T22:28:34.098Z error: verifyToken error: jwt must be provided
+2025-01-12T22:28:34.098Z error: Invalid or expired refresh token
+2025-01-12T22:28:34.111Z error: getCookie: cookies or search key undefined
+2025-01-12T22:28:34.111Z error: getCookie: cookies or search key undefined
+2025-01-12T22:28:34.112Z error: verifyToken error: jwt must be provided
+2025-01-12T22:28:34.112Z error: Invalid or expired refresh token
+2025-01-14T20:15:02.008Z info: server running on PORT 3300
+2025-01-14T20:16:17.953Z info: server running on PORT 3300
+2025-01-14T20:18:21.132Z info: server running on PORT 3300
+2025-01-14T20:18:54.578Z info: server running on PORT 3300
+2025-01-14T20:22:05.652Z info: server running on PORT 3300
+2025-01-14T20:25:23.409Z info: server running on PORT 3300
+2025-01-14T20:26:06.026Z info: server running on PORT 3300
+2025-01-14T20:26:30.121Z info: server running on PORT 3300
+2025-01-14T20:28:06.354Z info: server running on PORT 3300
+2025-01-14T20:30:56.308Z info: server running on PORT 3300
+2025-01-14T20:31:08.677Z info: server running on PORT 3300
+2025-01-14T20:31:17.011Z info: server running on PORT 3300
+2025-01-14T20:31:23.816Z info: server running on PORT 3300
+2025-01-14T20:31:29.278Z info: server running on PORT 3300
+2025-01-14T20:31:36.978Z info: server running on PORT 3300
+2025-01-14T20:32:01.867Z info: server running on PORT 3300
+2025-01-14T20:32:26.978Z error: getCookie: cookies or search key undefined
+2025-01-14T20:32:27.056Z info: User, 'gabby' logged-in successfully
+2025-01-14T20:33:24.983Z info: server running on PORT 3300
+2025-01-14T20:33:31.201Z error: getCookie: cookies or search key undefined
+2025-01-14T20:33:31.261Z info: User, 'gabby' logged-in successfully
+2025-01-14T20:37:21.774Z info: server running on PORT 3300
+2025-01-14T20:37:28.956Z info: server running on PORT 3300
+2025-01-14T20:37:38.502Z error: getCookie: cookies or search key undefined
+2025-01-14T20:37:38.557Z info: User, 'gabby' logged-in successfully
+2025-01-14T20:38:31.768Z info: User, 'gabby' logged-in successfully
+2025-01-14T20:42:05.958Z info: server running on PORT 3300
+2025-01-14T20:42:14.466Z info: User, 'gabby' logged-in successfully
+2025-01-14T20:42:41.172Z info: server running on PORT 3300
+2025-01-14T20:42:43.916Z info: User, 'gabby' logged-in successfully
+2025-01-14T20:43:41.999Z info: User, 'gabby' logged-in successfully
+2025-01-14T20:44:41.617Z error: verifyToken error: jwt expired
+2025-01-14T20:44:41.620Z error: verifyToken error: jwt expired
+2025-01-14T21:19:25.108Z info: server running on PORT 3300
+2025-01-14T21:20:08.880Z info: User, 'gabby' logged-in successfully
+2025-01-14T21:21:15.278Z error: getTokenPayloadFromCookies: Access token not found in cookies
+2025-01-14T21:21:15.279Z error: httpError. http://localhost:5173: AssertionError [ERR_ASSERTION]: {"httpStatusCode":401,"message":"User authentication failed","appErrorCode":"tokenExpired"} at throwError (/home/mac/Documents/Projects/nodejs/inventory_app/server/common/utils/errorHandler.js:21:10) at validJWTNeeded (/home/mac/Documents/Projects/nodejs/inventory_app/server/auth/middleware/jwt.middleware.js:80:5)
+2025-01-14T21:21:15.283Z error: getTokenPayloadFromCookies: Access token not found in cookies
+2025-01-14T21:21:15.285Z error: httpError. http://localhost:5173: AssertionError [ERR_ASSERTION]: {"httpStatusCode":401,"message":"User authentication failed","appErrorCode":"tokenExpired"} at throwError (/home/mac/Documents/Projects/nodejs/inventory_app/server/common/utils/errorHandler.js:21:10) at validJWTNeeded (/home/mac/Documents/Projects/nodejs/inventory_app/server/auth/middleware/jwt.middleware.js:80:5)
+2025-01-14T21:21:15.297Z info: createNewJWT: Access token REFRESHED for gabby
+2025-01-14T21:21:15.303Z info: createNewJWT: Access token REFRESHED for gabby
+2025-01-14T21:22:18.113Z info: server running on PORT 3300
+2025-01-14T21:22:21.521Z error: getTokenPayloadFromCookies: Access token not found in cookies
+2025-01-14T21:22:21.523Z error: httpError. http://localhost:5173: AssertionError [ERR_ASSERTION]: {"httpStatusCode":401,"message":"User authentication failed","appErrorCode":"tokenExpired"} at throwError (/home/mac/Documents/Projects/nodejs/inventory_app/server/common/utils/errorHandler.js:21:10) at validJWTNeeded (/home/mac/Documents/Projects/nodejs/inventory_app/server/auth/middleware/jwt.middleware.js:80:5)
+2025-01-14T21:22:21.568Z error: getTokenPayloadFromCookies: Access token not found in cookies
+2025-01-14T21:22:21.568Z error: httpError. http://localhost:5173: AssertionError [ERR_ASSERTION]: {"httpStatusCode":401,"message":"User authentication failed","appErrorCode":"tokenExpired"} at throwError (/home/mac/Documents/Projects/nodejs/inventory_app/server/common/utils/errorHandler.js:21:10) at validJWTNeeded (/home/mac/Documents/Projects/nodejs/inventory_app/server/auth/middleware/jwt.middleware.js:80:5)
+2025-01-14T21:24:44.858Z info: server running on PORT 3300
+2025-01-14T21:24:50.337Z info: User, 'gabby' logged-in successfully
+2025-01-14T21:32:06.725Z info: server running on PORT 3300
+2025-01-14T21:33:52.805Z info: User, 'gabby' logged-in successfully
+2025-01-14T21:34:17.919Z info: server running on PORT 3300
+2025-01-14T21:34:20.557Z info: User, 'gabby' logged-in successfully
+2025-01-14T21:35:38.410Z info: server running on PORT 3300
+2025-01-14T21:41:21.089Z info: server running on PORT 3300
+2025-01-14T21:48:11.631Z info: server running on PORT 3300
+2025-01-14T21:49:41.656Z info: User, 'gabby' logged-in successfully
+2025-01-14T21:51:04.381Z error: getTokenPayloadFromCookies: Access token not found in cookies
+2025-01-14T21:51:04.382Z error: httpError. http://localhost:5173: AssertionError [ERR_ASSERTION]: {"httpStatusCode":401,"message":"User authentication failed","appErrorCode":"tokenExpired"} at throwError (/home/mac/Documents/Projects/nodejs/inventory_app/server/common/utils/errorHandler.js:21:10) at validJWTNeeded (/home/mac/Documents/Projects/nodejs/inventory_app/server/auth/middleware/jwt.middleware.js:80:5)
+2025-01-14T21:51:04.388Z error: getTokenPayloadFromCookies: Access token not found in cookies
+2025-01-14T21:51:04.388Z error: httpError. http://localhost:5173: AssertionError [ERR_ASSERTION]: {"httpStatusCode":401,"message":"User authentication failed","appErrorCode":"tokenExpired"} at throwError (/home/mac/Documents/Projects/nodejs/inventory_app/server/common/utils/errorHandler.js:21:10) at validJWTNeeded (/home/mac/Documents/Projects/nodejs/inventory_app/server/auth/middleware/jwt.middleware.js:80:5)
+2025-01-14T21:51:04.406Z info: createNewJWT: Access token REFRESHED for gabby
+2025-01-14T21:51:04.412Z info: createNewJWT: Access token REFRESHED for gabby
+2025-01-15T21:11:12.416Z info: server running on PORT 3300
+2025-01-15T21:15:01.570Z error: getCookie: cookies or search key undefined
+2025-01-15T21:15:01.646Z info: User, 'gabby' logged-in successfully
+2025-01-15T21:18:33.721Z info: server running on PORT 3300
+2025-01-15T21:21:40.282Z info: server running on PORT 3300
+2025-01-15T21:21:51.654Z error: getTokenPayloadFromCookies: Access token not found in cookies
+2025-01-15T21:21:51.655Z error: httpError. http://localhost:5173: AssertionError [ERR_ASSERTION]: {"httpStatusCode":401,"message":"User authentication failed","appErrorCode":"tokenExpired"} at throwError (/home/mac/Documents/Projects/nodejs/inventory_app/server/common/utils/errorHandler.js:21:10) at validJWTNeeded (/home/mac/Documents/Projects/nodejs/inventory_app/server/auth/middleware/jwt.middleware.js:80:5)
+2025-01-15T21:21:51.703Z error: getTokenPayloadFromCookies: Access token not found in cookies
+2025-01-15T21:21:51.704Z error: httpError. http://localhost:5173: AssertionError [ERR_ASSERTION]: {"httpStatusCode":401,"message":"User authentication failed","appErrorCode":"tokenExpired"} at throwError (/home/mac/Documents/Projects/nodejs/inventory_app/server/common/utils/errorHandler.js:21:10) at validJWTNeeded (/home/mac/Documents/Projects/nodejs/inventory_app/server/auth/middleware/jwt.middleware.js:80:5)
+2025-01-15T21:23:10.263Z info: server running on PORT 3300
+2025-01-15T21:23:19.384Z info: User, 'gabby' logged-in successfully
+2025-01-15T21:24:22.682Z error: getTokenPayloadFromCookies: Access token not found in cookies
+2025-01-15T21:24:22.684Z error: httpError. http://localhost:5173: AssertionError [ERR_ASSERTION]: {"httpStatusCode":401,"message":"User authentication failed","appErrorCode":"tokenExpired"} at throwError (/home/mac/Documents/Projects/nodejs/inventory_app/server/common/utils/errorHandler.js:21:10) at validJWTNeeded (/home/mac/Documents/Projects/nodejs/inventory_app/server/auth/middleware/jwt.middleware.js:80:5)
+2025-01-15T21:24:22.693Z error: getTokenPayloadFromCookies: Access token not found in cookies
+2025-01-15T21:24:22.694Z error: httpError. http://localhost:5173: AssertionError [ERR_ASSERTION]: {"httpStatusCode":401,"message":"User authentication failed","appErrorCode":"tokenExpired"} at throwError (/home/mac/Documents/Projects/nodejs/inventory_app/server/common/utils/errorHandler.js:21:10) at validJWTNeeded (/home/mac/Documents/Projects/nodejs/inventory_app/server/auth/middleware/jwt.middleware.js:80:5)
+2025-01-15T21:24:22.703Z info: createNewJWT: Access token REFRESHED for gabby
+2025-01-15T21:24:22.714Z info: createNewJWT: Access token REFRESHED for gabby
+2025-01-15T21:25:44.764Z info: server running on PORT 3300
+2025-01-15T21:25:50.898Z error: getTokenPayloadFromCookies: Access token not found in cookies
+2025-01-15T21:25:50.900Z error: httpError. http://localhost:5173: AssertionError [ERR_ASSERTION]: {"httpStatusCode":401,"message":"User authentication failed","appErrorCode":"tokenExpired"} at throwError (/home/mac/Documents/Projects/nodejs/inventory_app/server/common/utils/errorHandler.js:21:10) at validJWTNeeded (/home/mac/Documents/Projects/nodejs/inventory_app/server/auth/middleware/jwt.middleware.js:80:5)
+2025-01-15T21:25:50.920Z info: createNewJWT: Access token REFRESHED for gabby
+2025-01-15T21:25:50.953Z error: getTokenPayloadFromCookies: Access token not found in cookies
+2025-01-15T21:25:50.953Z error: httpError. http://localhost:5173: AssertionError [ERR_ASSERTION]: {"httpStatusCode":401,"message":"User authentication failed","appErrorCode":"tokenExpired"} at throwError (/home/mac/Documents/Projects/nodejs/inventory_app/server/common/utils/errorHandler.js:21:10) at validJWTNeeded (/home/mac/Documents/Projects/nodejs/inventory_app/server/auth/middleware/jwt.middleware.js:80:5)
+2025-01-15T21:25:50.970Z info: createNewJWT: Access token REFRESHED for gabby
+2025-01-15T21:27:00.326Z error: getTokenPayloadFromCookies: Access token not found in cookies
+2025-01-15T21:27:00.327Z error: httpError. http://localhost:5173: AssertionError [ERR_ASSERTION]: {"httpStatusCode":401,"message":"User authentication failed","appErrorCode":"tokenExpired"} at throwError (/home/mac/Documents/Projects/nodejs/inventory_app/server/common/utils/errorHandler.js:21:10) at validJWTNeeded (/home/mac/Documents/Projects/nodejs/inventory_app/server/auth/middleware/jwt.middleware.js:80:5)
+2025-01-15T21:27:00.327Z error: getTokenPayloadFromCookies: Access token not found in cookies
+2025-01-15T21:27:00.328Z error: httpError. http://localhost:5173: AssertionError [ERR_ASSERTION]: {"httpStatusCode":401,"message":"User authentication failed","appErrorCode":"tokenExpired"} at throwError (/home/mac/Documents/Projects/nodejs/inventory_app/server/common/utils/errorHandler.js:21:10) at validJWTNeeded (/home/mac/Documents/Projects/nodejs/inventory_app/server/auth/middleware/jwt.middleware.js:80:5)
+2025-01-15T21:27:00.344Z info: createNewJWT: Access token REFRESHED for gabby
+2025-01-15T21:27:00.348Z info: createNewJWT: Access token REFRESHED for gabby

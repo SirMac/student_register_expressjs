@@ -18,7 +18,7 @@ student_router.get('/delstudent/:id', stdcontroller.deletestudent)
 
 //============ Edit Student Details ==============
 student_router.get('/editstudent/:id', stdcontroller.editstudent_index) 
-student_router.post('/editstudent/:id', joivalidate.validate, stdcontroller.editstudent_update)
+student_router.post('/editstudent/:id', joivalidate.validateNewStudent, stdcontroller.editstudent_update)
 
 // Middleware to handle 404
 student_router.use((req,res,next)=>{
