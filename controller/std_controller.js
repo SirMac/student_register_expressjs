@@ -1,13 +1,17 @@
 const uploadfile = require('../config/fileUpload')
-const db = require('../models/orm_model').schema()
 const logger = require('../config/err_logger')
+const db = require('../models/databaseManager')
 
 //=============Dashboard======================
-exports.dashboard = (req,res)=>{
-   db.findAll().then(result=>{
-       res.render('index.ejs', {title:'Home',nvbrand:'Student Register', 
-       nlink:'active',rlink:'',llink:'',sdata:result})
-   }).catch(e=> logger.log('error',`'Sequalize DB Query Error' ${e}`)) 
+exports.dashboard = async (req,res)=>{
+   result = await db.select('student')
+   if(result.error) {
+      logger.error(`GetStudents: ${result.error}`)
+   }
+   res.render('index.ejs', { //check data avalilability on client side
+      title:'Home',nvbrand:'Student Register', 
+      nlink:'active',rlink:'',llink:'',sdata:result
+   })
 }
  
 //===========Add New Student=============================
@@ -16,56 +20,78 @@ exports.addstudent_index = (req,res)=>{
    rlink:'active',nlink:'',llink:'',sdata:[] })
 }
 
-exports.addstudent_create = (req,res)=>{
+exports.addstudent_create = async (req,res)=>{
    const {name,course,level,gender,club,stdtype} = req.body
    const {img} = req.files
-   db.create({name,course,level,gender,club,stdtype,img:img.name}).then(s=>{
-      req.flash('success_msg', `"${s.name}" Added Successfully`)
-      logger.log('info',`${s.name} Added Successfully`)
-      uploadfile.imgupload(img)
-      res.redirect('/students')
-   })
+   let student = {name,course,level,gender,club,stdtype,img:img.name}
+   result = await db.add(student)
+
+   if(result.error) {
+      logger.error(`AddStudent: ${result.error}`)
+      return res.redirect('/students')
+   }
+
+   req.flash('success_msg', `"${result.name}" Added Successfully`)
+   logger.log('info',`${result.name} Added Successfully`)
+   uploadfile.imgupload(img)
+   res.redirect('/students')
    
 }
 
 //=========== Delete Student =======================
-exports.deletestudent = (req,res)=>{
-   db.destroy({where:{id:req.params.id}}).then(() => {
-      req.flash('success_msg', `Student With ID ${req.params.id} Deleted Successfully`)
-      logger.log('info','Delete Student Successful')
-      uploadfile.imgdelete(req.query.img)
-      res.redirect('/students')
-   })
+exports.deletestudent = async (req,res)=>{
+   const result = await db.delete('student', req.params.id)
+
+   if(result.error){
+      logger.log('error',`Delete Student not Successful: ${result.error}`)
+      return res.redirect('/students')
+   }
+
+   req.flash('success_msg', `Student With ID ${req.params.id} Deleted Successfully`)
+   logger.log('info','Delete Student Successful')
+   uploadfile.imgdelete(req.query.img)
+   res.redirect('/students')
+
+   // db.destroy({where:{id:req.params.id}}).then(() => {
+   //    req.flash('success_msg', `Student With ID ${req.params.id} Deleted Successfully`)
+   //    logger.log('info','Delete Student Successful')
+   //    uploadfile.imgdelete(req.query.img)
+   //    res.redirect('/students')
+   // })
 }
 
 //==============Edit Student ======================
-exports.editstudent_index = (req,res)=>{
-   db.findOne({where:{id:req.params.id}}).then((result)=>{
-      if(result){
-         res.render('editstudent.ejs',{title:'Edit Student Detail',nvbrand:'Edit Student Detail', 
-         rlink:'active',nlink:'',llink:'',edata:result})
-      }
-      else{
-         req.flash('error_msg', `That Resource Not Found !!!`)
-         logger.log('error', `That Resource Not Found !!!`)
-         res.redirect('/students')
-      }
+exports.editstudent_index = async (req,res)=>{
+   const result = await db.select('student', {where:{id:req.params.id}})
+
+    if(result.error){
+      req.flash('error_msg', `That Resource Not Found !!!`)
+      logger.log('error',`Edit Student page not found: ${result.error}`)
+      return res.redirect('/students')
+   }
+
+   res.render('editstudent.ejs',{
+      title:'Edit Student Detail',nvbrand:'Edit Student Detail', 
+      rlink:'active',nlink:'',llink:'',edata:result[0]
    })
 }
 
-exports.editstudent_update = (req,res)=>{
+exports.editstudent_update = async (req,res)=>{
    const {name,course,level,gender,club,stdtype} = req.body
    //check if image is selected
    const _img = req.files ? req.files.img.name : req.query.img  
-   db.update({name,course,level,gender,club,stdtype,img:_img},{where:{id:req.params.id}}).then((e)=>{
-      req.flash('success_msg', `"${name}" Details Editted Successfully`)
-      logger.log('info', `"${name}" Details Editted Successfully`)
-      //don't upload if no image is selected 
-      req.files ? (uploadfile.imgupload(req.files.img),
-      uploadfile.imgdelete(req.query.img)): '' 
-      res.redirect('/students')
-   }).catch(()=>{
-      logger.log('error','Edit Student not Successful')
-      res.redirect('/students')
-   })
+   const data = {name,course,level,gender,club,stdtype,img:_img}
+   const result = await db.update('student', data, req.params.id)
+
+   if(result.error){
+      logger.log('error',`Edit Student not Successful: ${result.error}`)
+      return res.redirect('/students')
+   }
+
+   req.flash('success_msg', `"${name}" Details Editted Successfully`)
+   logger.log('info', `"${name}" Details Editted Successfully`)
+   //don't upload if no image is selected 
+   req.files ? (uploadfile.imgupload(req.files.img),
+   uploadfile.imgdelete(req.query.img)): '' 
+   res.redirect('/students')
 }

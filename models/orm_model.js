@@ -4,14 +4,14 @@
 //Author: Mac. All rights reserved.
 const logger = require('../config/err_logger')
 const {Sequelize, DataTypes} = require('sequelize')
-const dbconfig = require('../config/dbconfig.json')
+const dbconfig = require('./dbconfig.json')
 const {username,password,database,host,dialect} = dbconfig.development_pg
 const sequelize = new Sequelize(database,username,password,{
    host, dialect,
    logging: false
 })
 
-exports.schema = ()=>{
+exports.student = ()=>{
   let student = sequelize.define("stdregister",{
     name: DataTypes.STRING,
     course: DataTypes.STRING,

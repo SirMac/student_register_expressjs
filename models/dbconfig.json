@@ -1,8 +1,8 @@
 {
   "development_pg": {
-    "username": "postgres",
+    "username": "mac",
     "password": "123",
-    "database": "pollsapp",
+    "database": "testdb",
     "host": "127.0.0.1",
     "dialect": "postgres",
     "operatorsAliases": false
