@@ -2,7 +2,7 @@
 //import to app: const db = require('../models/orm_model').schema()
 //e.g. db.findAll().then(result=>{})
 //Author: Mac. All rights reserved.
-const logger = require('../config/err_logger')
+const logger = require('../common/logger/logManager')
 const {Sequelize, DataTypes} = require('sequelize')
 const dbconfig = require('./dbconfig.json')
 const {username,password,database,host,dialect} = dbconfig.development_pg

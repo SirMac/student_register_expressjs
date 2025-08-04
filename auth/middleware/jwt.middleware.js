@@ -1,4 +1,4 @@
-const { logger } = require('../../common/logger/logger');
+const { logger } = require('../../common/logger/logManager');
 const { jsonParse } = require('../../common/services/common.services');
 const { throwError, error } = require('../../common/utils/errorHandler');
 const { logoutUser } = require('../../users/controller/users.controller');

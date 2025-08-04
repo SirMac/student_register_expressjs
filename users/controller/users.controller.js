@@ -1,6 +1,6 @@
 const { register } = require('../services/users.services')
 const { authenticate } = require('../../auth/services/authenticate')
-const logger = require('../../config/err_logger')
+const logger = require('../../common/logger/logManager')
 
 
 class UserController {

@@ -1,8 +1,7 @@
 const { isHashValid, hashData } = require('../../common/services/common.crypto')
 const db = require('../../models/databaseManager')
-const bcryptjs = require('bcryptjs')
 const bcrpyt = require('../../common/utils/encrypt')
-const logger = require('../../config/err_logger')
+const logger = require('../../common/logger/logManager')
 
 class UserServices {
 

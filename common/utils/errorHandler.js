@@ -1,5 +1,5 @@
 const assert = require('node:assert')
-const { logger } = require('../logger/logger')
+const { logger } = require('../logger/logManager')
 // const { parseErrorStack } = require('../services/common.services')
 
 
