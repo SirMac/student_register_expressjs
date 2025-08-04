@@ -1,6 +1,6 @@
 const logger = require('../../common/logger/logManager')
 const db = require('../../models/databaseManager')
-const fileUpload = require('../services/fileUpload')
+const { imgupload, imgdelete } = require('../../common/utils/fileUpload')
 
 
 class StudentController {
@@ -37,7 +37,7 @@ class StudentController {
 
         req.flash('success_msg', `"${result.name}" Added Successfully`)
         logger.log('info', `${result.name} Added Successfully`)
-        fileUpload.imgupload(img)
+        imgupload(img)
         res.redirect('/students')
 
     }
@@ -53,13 +53,13 @@ class StudentController {
 
         req.flash('success_msg', `Student With ID ${req.params.id} Deleted Successfully`)
         logger.log('info', 'Delete Student Successful')
-        fileUpload.imgdelete(req.query.img)
+        imgdelete(req.query.img)
         res.redirect('/students')
 
         // db.destroy({where:{id:req.params.id}}).then(() => {
         //    req.flash('success_msg', `Student With ID ${req.params.id} Deleted Successfully`)
         //    logger.log('info','Delete Student Successful')
-        //    fileUpload.imgdelete(req.query.img)
+        //    imgdelete(req.query.img)
         //    res.redirect('/students')
         // })
     }
@@ -100,8 +100,8 @@ class StudentController {
         req.flash('success_msg', `"${name}" Details Editted Successfully`)
         logger.log('info', `"${name}" Details Editted Successfully`)
         //don't upload if no image is selected 
-        req.files ? (fileUpload.imgupload(req.files.img),
-            fileUpload.imgdelete(req.query.img)) : ''
+        req.files ? (imgupload(req.files.img),
+            imgdelete(req.query.img)) : ''
         res.redirect('/students')
     }
 }
