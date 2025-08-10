@@ -1,22 +1,22 @@
 const { register } = require('../services/users.services')
 const { authenticate } = require('../../auth/services/authenticate')
-const logger = require('../../common/logger/logManager')
+const { info } = require('../../common/utils/errorHandler')
 
 
 class UserController {
 
-    getLoginPage(req, res){
-        res.render('login.ejs', {title:'Login'})
+    getLoginPage(req, res) {
+        res.render('login.ejs', { title: 'Login' })
     }
 
     authenticateUser = (req, res, next) => {
 
-        return authenticate(req, res, next) 
-        
+        return authenticate(req, res, next)
+
     }
 
-    getRegisterPage(req, res){
-        res.render('register.ejs', {title:'Register'})
+    getRegisterPage(req, res) {
+        res.render('register.ejs', { title: 'Register' })
     }
 
     createUser = async (req, res) => {
@@ -24,7 +24,7 @@ class UserController {
     }
 
     logoutUser(req, res) {
-        logger.log('info',`"${req.user}" Successfuly Logged-out`)
+        info(`"${req.user}" Successfuly Logged-out`)
         req.logout();
         res.redirect('/login');
     }

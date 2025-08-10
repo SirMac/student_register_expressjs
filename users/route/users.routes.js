@@ -20,7 +20,7 @@ class UserRoutes {
         .post(validateUser, authenticateUser)
 
         this.app.route('/logout')
-        .post(logoutUser)
+        .get(logoutUser)
 
 
         return this.app

@@ -1,6 +1,6 @@
 const httpErrors = require('http-errors')
 const { error } = require('../utils/errorHandler')
-const { jsonParse, parseErrorStack } = require('../services/common.services')
+const { jsonParse } = require('../services/common.services')
 const { sendErrorResponse } = require('../utils/requestHandler')
 
 
@@ -13,28 +13,27 @@ class ErrorHandlerMiddleware {
     configureMiddleware() {
 
         process.on('uncaughtException', err => {
-            error(`uncaughtException: ${parseErrorStack(err,3)}`)
+            error(err)
             process.exit(1)
         })
 
         process.on('unhandledRejection', err => {
-            error(`unhandledRejection: ${parseErrorStack(err,3)}`)
+            error(err)
             process.exit(1)
-            
+
         })
 
         this.app.use((req, res, next) => {
-            next(httpErrors(404, 'route not found'))
+            next(httpErrors(404, 'route not found error'))
         })
 
         this.app.use((err, req, res, next) => {
 
-            if(!err.message) return next()
-            
+            if (!err.message) return next()
+
             const errorMessage = jsonParse(err.message)
-            if(!errorMessage){
-                const errorDetail = parseErrorStack(err, 2)
-                error(`httpError: ${errorDetail}`)
+            if (!errorMessage) {
+                error(err)
                 return sendErrorResponse(res)
             }
 
@@ -44,9 +43,9 @@ class ErrorHandlerMiddleware {
                 appErrorCode
             } = errorMessage
 
-            error(`httpError. ${req.headers?.origin}: ${err.stack ? parseErrorStack(err, 3) : message}`)
+            error(err)
             sendErrorResponse(res, httpStatusCode, { message, errorCode: appErrorCode })
-            
+
         })
 
         return this.app

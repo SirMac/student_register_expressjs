@@ -1,0 +1,26 @@
+2025-08-10T15:02:01.249Z info: Listening on Port 3000
+2025-08-10T15:02:16.681Z info: Listening on Port 3000
+2025-08-10T15:02:26.975Z error: Please log in to view that resource
+2025-08-10T15:02:30.864Z info: Successfully Logged-In: 
+2025-08-10T15:02:32.472Z info: "admin" Successfuly Logged-out
+2025-08-10T15:02:42.336Z info: Listening on Port 3000
+2025-08-10T15:02:47.576Z info: Successfully Logged-In: 
+2025-08-10T15:03:13.841Z info: Listening on Port 3000
+2025-08-10T15:03:18.206Z error: Please log in to view that resource
+2025-08-10T15:03:22.158Z info: Successfully Logged-In: 
+2025-08-10T15:03:23.756Z error: SyntaxError: Unexpected token r in JSON at position 0 at JSON.parse (<anonymous>) at jsonParse (/Users/mac/Documents/Project/JavaScript/NodeJs_Apps/student_register_expressjs/common/services/common.services.js:16:19)
+2025-08-10T15:03:23.757Z error: NotFoundError: route not found error at /Users/mac/Documents/Project/JavaScript/NodeJs_Apps/student_register_expressjs/common/middleware/errorHandlerMiddleware.js:27:18 at Layer.handle [as handle_request] (/Users/mac/Documents/Project/JavaScript/NodeJs_Apps/student_register_expressjs/node_modules/express/lib/router/layer.js:95:5) at trim_prefix (/Users/mac/Documents/Project/JavaScript/NodeJs_Apps/student_register_expressjs/node_modules/express/lib/router/index.js:328:13)
+2025-08-10T15:03:23.802Z error: SyntaxError: Unexpected token r in JSON at position 0 at JSON.parse (<anonymous>) at jsonParse (/Users/mac/Documents/Project/JavaScript/NodeJs_Apps/student_register_expressjs/common/services/common.services.js:16:19)
+2025-08-10T15:03:23.802Z error: NotFoundError: route not found error at /Users/mac/Documents/Project/JavaScript/NodeJs_Apps/student_register_expressjs/common/middleware/errorHandlerMiddleware.js:27:18 at Layer.handle [as handle_request] (/Users/mac/Documents/Project/JavaScript/NodeJs_Apps/student_register_expressjs/node_modules/express/lib/router/layer.js:95:5) at trim_prefix (/Users/mac/Documents/Project/JavaScript/NodeJs_Apps/student_register_expressjs/node_modules/express/lib/router/index.js:328:13)
+2025-08-10T15:03:52.985Z info: Listening on Port 3000
+2025-08-10T15:03:56.941Z error: Please log in to view that resource
+2025-08-10T15:04:01.486Z info: Successfully Logged-In: 
+2025-08-10T15:04:03.145Z error: SyntaxError: Unexpected token r in JSON at position 0 at JSON.parse (<anonymous>) at jsonParse (/Users/mac/Documents/Project/JavaScript/NodeJs_Apps/student_register_expressjs/common/services/common.services.js:16:19)
+2025-08-10T15:04:03.145Z error: NotFoundError: route not found error at /Users/mac/Documents/Project/JavaScript/NodeJs_Apps/student_register_expressjs/common/middleware/errorHandlerMiddleware.js:27:18 at Layer.handle [as handle_request] (/Users/mac/Documents/Project/JavaScript/NodeJs_Apps/student_register_expressjs/node_modules/express/lib/router/layer.js:95:5) at trim_prefix (/Users/mac/Documents/Project/JavaScript/NodeJs_Apps/student_register_expressjs/node_modules/express/lib/router/index.js:328:13)
+2025-08-10T15:04:03.175Z error: SyntaxError: Unexpected token r in JSON at position 0 at JSON.parse (<anonymous>) at jsonParse (/Users/mac/Documents/Project/JavaScript/NodeJs_Apps/student_register_expressjs/common/services/common.services.js:16:19)
+2025-08-10T15:04:03.176Z error: NotFoundError: route not found error at /Users/mac/Documents/Project/JavaScript/NodeJs_Apps/student_register_expressjs/common/middleware/errorHandlerMiddleware.js:27:18 at Layer.handle [as handle_request] (/Users/mac/Documents/Project/JavaScript/NodeJs_Apps/student_register_expressjs/node_modules/express/lib/router/layer.js:95:5) at trim_prefix (/Users/mac/Documents/Project/JavaScript/NodeJs_Apps/student_register_expressjs/node_modules/express/lib/router/index.js:328:13)
+2025-08-10T15:04:23.763Z info: Listening on Port 3000
+2025-08-10T15:04:27.028Z info: "undefined" Successfuly Logged-out
+2025-08-10T15:04:31.149Z info: Successfully Logged-In: 
+2025-08-10T15:04:32.477Z info: "admin" Successfuly Logged-out
+2025-08-10T15:04:37.397Z info: Successfully Logged-In: 
