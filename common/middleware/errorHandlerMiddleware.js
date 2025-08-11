@@ -11,17 +11,21 @@ class ErrorHandlerMiddleware {
     }
 
     configureMiddleware() {
+        const processEvents = [
+            {
+                'name': 'uncaughtException'
+            },
+             {
+                'name': 'unhandledRejection'
+            }
+        ]
 
-        process.on('uncaughtException', err => {
-            error(err)
-            process.exit(1)
-        })
-
-        process.on('unhandledRejection', err => {
-            error(err)
-            process.exit(1)
-
-        })
+        for (const event of processEvents) {
+            process.on(event.name, err => {
+                error(err)
+                process.exit(1)
+            })
+        }
 
         this.app.use((req, res, next) => {
             next(httpErrors(404, 'route not found error'))
